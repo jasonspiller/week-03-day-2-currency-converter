@@ -8,22 +8,74 @@
 
 	<title>Currency Converter</title>
 
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" href="assets/css/style.css">
 
 </head>
 <body>
 
-	<form name="currency converter">
-    $<input type="text"></input>
-    <input type="button" value="EUR"></input>
-    <input type="button" value="GBP"></input>
-    <input type="button" value="CNY"></input>
-    <input type="button" value="JPY"></input>
-  </form>
-  <span id="output_amount"></span>
-  <span id="output_currency"></span>
+	<div class="container">
+
+		<div class="row">
+			<div class="col center text-center text-secondary">
+
+				<h1>Amount in US Dollars</h1>
+
+			</div>
+		</div>
+
+		<form name="currency converter">
+
+		<div class="form-row justify-content-center">
+			<div class="form-group col-xs-6">
+
+				<div class="input-group input-group-lg">
+	        <div class="input-group-prepend">
+	          <div class="input-group-text">$</div>
+	        </div>
+	        <input type="text" class="form-control">
+	      </div>
+
+			</div>
+		</div>
+
+		<div class="form-row justify-content-center">
+			<div class="form-group col-xs-6">
+		    <button type="button" value="EUR" class="btn btn-lg btn-outline-dark" data-toggle="collapse" data-target=".outputValue">EUR</button>
+			</div>
+			<div class="form-group col-xs-6">
+				<button type="button" value="GBP" class="btn btn-lg btn-outline-dark" data-toggle="collapse" data-target=".outputValue">GBP</button>
+			</div>
+
+			<!-- Force next columns to break to new line at md breakpoint and up -->
+			<div class="w-100 d-none d-xs-block"></div>
+
+			<div class="form-group col-xs-6">
+				<button type="button" value="CNY" class="btn btn-lg btn-outline-dark" data-toggle="collapse" data-target=".outputValue">CNY</button>
+			</div>
+			<div class="form-group col-xs-6">
+		    <button type="button" value="JPY" class="btn btn-lg btn-outline-dark" data-toggle="collapse" data-target=".outputValue">JPY</button>
+			</div>
+		</div>
+
+		</form>
+
+		<div class="row justify-content-center">
+			<div class="col-sm-8 text-center">
+
+				<div class="outputValue collapse">
+
+					<h2 class="card card-body output"></h2>
+
+				</div>
+
+			</div>
+		</div>
+
+	</div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	<script src="assets/js/main.js"></script>
 
 </body>
